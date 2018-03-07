@@ -8,7 +8,6 @@ $(document).ready(() => {
 
 function getMovies(searchText) {
   var mykey = config.MY_KEY;
-
   axios.get('http://www.omdbapi.com/?apikey=' + mykey + '&s=' + searchText)
     .then(res => {
       let movies = res.data.Search;
